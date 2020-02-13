@@ -2,7 +2,7 @@ import React from 'react'
 import Display from './Display'
 import Controls from './Controls'
 
-function Player({
+export default function Player({
   name,
   health,
   morale,
@@ -14,8 +14,10 @@ function Player({
   return (
     <div className="Player">
       <h4>The player's name is {name}</h4>
+
       <Display type='Health' data={health} />
       <Display type='Morale' data={morale} />
+
       <Controls
         actions={{
           exercise,
@@ -26,5 +28,3 @@ function Player({
     </div>
   );
 }
-
-export default Player;

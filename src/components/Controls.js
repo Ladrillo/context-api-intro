@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Controls({ actions }) {
+export default function Controls({ actions }) {
   const actionNames = Object.keys(actions)
 
   return (
@@ -20,5 +20,3 @@ function Controls({ actions }) {
     </div>
   );
 }
-
-export default Controls;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Player from './Player'
 
-function App({ name }) {
+export default function App({ name }) {
   const [health, setHealth] = useState(100)
   const [morale, setMorale] = useState(100)
 
@@ -33,5 +33,3 @@ function App({ name }) {
     </div>
   );
 }
-
-export default App;
