@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid greenyellow;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 25px;
+}
+
+.Controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+button {
+  margin-bottom: 5px;
+}
+
+.points {
+  font-weight: bold;
+}

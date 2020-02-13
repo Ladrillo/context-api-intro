@@ -8,7 +8,12 @@ function Controls({ actions }) {
       {
         actionNames.map(actionName => {
           return (
-            <button onClick={actions[actionName]}>{actionName}</button>
+            <button
+              key={actionName}
+              onClick={actions[actionName]}
+            >
+              {actionName}
+            </button>
           )
         })
       }

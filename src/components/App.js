@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Player from './Player'
-import './App.css';
 
 function App({ name }) {
   const [health, setHealth] = useState(100)
@@ -19,21 +18,17 @@ function App({ name }) {
     setMorale(health => health + 10)
   }
 
-  const readNewsPaper = () => {
-    setHealth(health => health - 5)
-    setMorale(health => health + 25)
-  }
-
   return (
     <div className="App">
       <Player
+        // state
         name={name}
         health={health}
+        // callbacks that operate on state
         morale={morale}
         exercise={exercise}
         eatJunkFood={eatJunkFood}
         catchUpWithFriends={catchUpWithFriends}
-        readNewsPaper={readNewsPaper}
       />
     </div>
   );
