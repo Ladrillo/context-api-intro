@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import playerContext from '../contexts/player'
 import Player from './Player'
 
 export default function App({ name }) {
@@ -8,26 +9,32 @@ export default function App({ name }) {
   const actions = {
     exercise() {
       setHealth(health => health + 20)
-      setMorale(health => health + 10)
+      setMorale(morale => morale + 10)
     },
 
     eatJunkFood() {
-      setMorale(health => health + 1)
       setHealth(health => health - 10)
+      setMorale(morale => morale + 1)
     },
 
     catchUpWithFriends() {
-      setMorale(health => health + 10)
-    }
+      setMorale(morale => morale + 10)
+    },
+
+    watchTheNews() {
+      setMorale(morale => morale - 30)
+    },
   }
 
   return (
     <div className="App">
-      <Player
-        name={name}
-        data={{ health, morale }}
-        actions={actions}
-      />
+      <playerContext.Provider value={{
+        name,
+        actions,
+        scores: { health, morale }
+      }}>
+        <Player />
+      </playerContext.Provider>
     </div >
   );
 }

@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import playerContext from '../contexts/player'
 
-export default function Controls({ actions }) {
+export default function Controls() {
+  const { actions } = useContext(playerContext)
+
   return (
     <div className="Controls">
       {

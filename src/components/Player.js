@@ -1,28 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Display from './Display'
 import Controls from './Controls'
+import playerContext from '../contexts/player'
 
-export default function Player({
-  name,
-  data,
-  actions,
-}) {
+export default function Player() {
+  const { name, scores: { health, morale }} = useContext(playerContext)
+
   return (
     <div className="Player">
       <h4>The player's name is {name}</h4>
 
       <Display
         type='Health'
-        data={data.health}
-      />
-      <Display
-        type='Morale'
-        data={data.morale}
+        data={health}
       />
 
-      <Controls
-        actions={actions}
+      <Display
+        type='Morale'
+        data={morale}
       />
+
+      <Controls />
     </div>
   );
 }
