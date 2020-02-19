@@ -7,7 +7,12 @@ const getStyle = points => ({
 export default function Display({ type, data }) {
   return (
     <div className="Display">
-      {type} is at <span style={getStyle(data)} className='points'>{data}</span>
+      {type} is at&nbsp;
+
+      <span
+        style={getStyle(data)}
+        className='points'>{data}
+      </span>
     </div>
   );
 }
