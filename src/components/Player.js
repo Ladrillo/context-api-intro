@@ -20,5 +20,5 @@ export default function Player({ name, actions, scores }) {
 
       <Controls actions={actions} />
     </div>
-  );
+  )
 }

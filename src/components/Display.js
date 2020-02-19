@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const getStyle = points => ({
   color: `${points > 50 ? 'green' : 'red'}`
@@ -6,7 +6,7 @@ const getStyle = points => ({
 
 export default function Display({ type, data }) {
   return (
-    <div className="Display">
+    <div className='Display'>
       {type} is at&nbsp;
 
       <span
@@ -14,5 +14,5 @@ export default function Display({ type, data }) {
         className='points'>{data}
       </span>
     </div>
-  );
+  )
 }

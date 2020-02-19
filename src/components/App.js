@@ -29,5 +29,5 @@ export default function App({ name }) {
         actions={actions}
       />
     </div >
-  );
+  )
 }
