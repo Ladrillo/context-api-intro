@@ -2,29 +2,15 @@ import React from 'react'
 import Display from './Display'
 import Controls from './Controls'
 
-export default function Player({
-  name,
-  health,
-  morale,
-  exercise,
-  eatJunkFood,
-  catchUpWithFriends,
-}) {
-
+export default function Player({ name }) {
   return (
     <div className="Player">
       <h4>The player's name is {name}</h4>
 
-      <Display type='Health' data={health} />
-      <Display type='Morale' data={morale} />
+      <Display type='health' />
+      <Display type='morale' />
 
-      <Controls
-        actions={{
-          exercise,
-          eatJunkFood,
-          catchUpWithFriends,
-        }}
-      />
+      <Controls />
     </div>
   );
 }

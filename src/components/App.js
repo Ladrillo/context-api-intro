@@ -22,19 +22,12 @@ export default function App({ name }) {
 
   return (
     <div className="App">
-      {/* <playerContext.Provider value={{
-        name, health, morale, exercise, eatJunkFood, catchUpWithFriends
-      }}> */}
-      <Player
-        name={name}
-        health={health}
-        morale={morale}
-        // callbacks that operate on state
-        exercise={exercise}
-        eatJunkFood={eatJunkFood}
-        catchUpWithFriends={catchUpWithFriends}
-      />
-      {/* </playerContext.Provider> */}
-    </div>
+      <playerContext.Provider value={{
+        actions: { exercise, eatJunkFood, catchUpWithFriends },
+        scores: { health, morale },
+      }}>
+        <Player name={name} />
+      </playerContext.Provider>
+    </div >
   );
 }
