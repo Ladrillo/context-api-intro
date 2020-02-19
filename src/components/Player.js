@@ -6,7 +6,8 @@ export default function Player({ name, actions, scores }) {
   return (
     <div className="Player">
       <h4>Player's name is&nbsp;
-        <span className="fancy">{name}</span></h4>
+        <span className="fancy">{name}</span>
+      </h4>
 
       <Display
         type='Health'
