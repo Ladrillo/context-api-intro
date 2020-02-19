@@ -4,11 +4,8 @@ import Controls from './Controls'
 
 export default function Player({
   name,
-  health,
-  morale,
-  exercise,
-  eatJunkFood,
-  catchUpWithFriends,
+  data,
+  actions,
 }) {
   return (
     <div className="Player">
@@ -16,19 +13,15 @@ export default function Player({
 
       <Display
         type='Health'
-        data={health}
+        data={data.health}
       />
       <Display
         type='Morale'
-        data={morale}
+        data={data.morale}
       />
 
       <Controls
-        actions={{
-          exercise,
-          eatJunkFood,
-          catchUpWithFriends,
-        }}
+        actions={actions}
       />
     </div>
   );
