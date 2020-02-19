@@ -4,9 +4,9 @@ import Controls from './Controls'
 
 export default function Player({ name, actions, scores }) {
   return (
-    <div className="Player">
+    <div className='Player'>
       <h4>Player's name is&nbsp;
-        <span className="fancy">{name}</span>
+        <span className='fancy'>{name}</span>
       </h4>
 
       <Display

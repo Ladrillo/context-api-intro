@@ -22,7 +22,7 @@ export default function App({ name }) {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       <Player
         name={name}
         scores={{ health, morale }}

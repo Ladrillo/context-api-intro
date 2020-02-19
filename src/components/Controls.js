@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Controls({ actions }) {
   return (
-    <div className="Controls">
+    <div className='Controls'>
       {
         Object.keys(actions).map(actionName => {
           return (
