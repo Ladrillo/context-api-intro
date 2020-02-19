@@ -15,10 +15,11 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid greenyellow;
+  border: 4px solid greenyellow;
   padding: 10px;
   margin: 20px;
   border-radius: 25px;
+  box-shadow: 10px 10px 38px -30px rgba(0,0,0,0.57);
 }
 
 .Controls {
@@ -30,9 +31,10 @@ code {
 }
 
 button {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   height: 25px;
   border-radius: 5px;
+  border: 1px dashed #db2c80;
 }
 
 .points {
