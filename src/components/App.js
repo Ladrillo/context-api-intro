@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Player from './Player'
+import playerContext from '../contexts/player'
 
 export default function App({ name }) {
   const [health, setHealth] = useState(100)
@@ -20,16 +21,20 @@ export default function App({ name }) {
 
   return (
     <div className="App">
-      <Player
-        // state
-        name={name}
-        health={health}
-        // callbacks that operate on state
-        morale={morale}
-        exercise={exercise}
-        eatJunkFood={eatJunkFood}
-        catchUpWithFriends={catchUpWithFriends}
-      />
+      <playerContext.Provider value={{
+        name, health, morale, exercise, eatJunkFood, catchUpWithFriends
+      }}>
+        <Player
+          // state
+          name={name}
+          health={health}
+          // callbacks that operate on state
+          morale={morale}
+          exercise={exercise}
+          eatJunkFood={eatJunkFood}
+          catchUpWithFriends={catchUpWithFriends}
+        />
+      </playerContext.Provider>
     </div>
   );
 }
