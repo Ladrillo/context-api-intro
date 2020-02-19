@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
-import playerContext from '../contexts/player'
+import React from 'react';
 
 const getStyle = points => ({
   color: `${points > 50 ? 'green' : 'red'}`
 })
 
-export default function Display({ type }) {
-  const { scores } = useContext(playerContext)
-  const data = scores[type]
-
+export default function Display({ type, data }) {
   return (
     <div className="Display">
       {type} is at <span style={getStyle(data)} className='points'>{data}</span>
