@@ -12,7 +12,7 @@ export default function App({ name }) {
   }
 
   const eatJunkFood = () => {
-    setHealth(health => health + 1)
+    setMorale(health => health + 1)
     setHealth(health => health - 10)
   }
 
@@ -22,20 +22,19 @@ export default function App({ name }) {
 
   return (
     <div className="App">
-      <playerContext.Provider value={{
+      {/* <playerContext.Provider value={{
         name, health, morale, exercise, eatJunkFood, catchUpWithFriends
-      }}>
-        <Player
-          // state
-          name={name}
-          health={health}
-          // callbacks that operate on state
-          morale={morale}
-          exercise={exercise}
-          eatJunkFood={eatJunkFood}
-          catchUpWithFriends={catchUpWithFriends}
-        />
-      </playerContext.Provider>
+      }}> */}
+      <Player
+        name={name}
+        health={health}
+        morale={morale}
+        // callbacks that operate on state
+        exercise={exercise}
+        eatJunkFood={eatJunkFood}
+        catchUpWithFriends={catchUpWithFriends}
+      />
+      {/* </playerContext.Provider> */}
     </div>
   );
 }
