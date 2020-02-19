@@ -7,11 +7,12 @@ export default function App({ name }) {
   const [morale, setMorale] = useState(100)
 
   const exercise = () => {
-    setHealth(health => health + 10)
-    setMorale(health => health + 5)
+    setHealth(health => health + 20)
+    setMorale(health => health + 10)
   }
 
   const eatJunkFood = () => {
+    setHealth(health => health + 1)
     setHealth(health => health - 10)
   }
 
