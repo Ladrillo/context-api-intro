@@ -35,11 +35,12 @@ export default function App({ name }) {
       which renders another component
       ...
       is actually using <Player /> */}
-      
+
       {/* if player is getting its props magically
       we don't need to have its parent feed it the props */}
-
-      <Player />
+      <playerContext.Provider>
+        <Player />
+      </playerContext.Provider>
     </div>
   )
 }
