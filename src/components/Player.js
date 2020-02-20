@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Display from './Display'
 import Controls from './Controls'
 import playerContext from '../contexts/player'
 
 export default function Player() {
+  const stuff = useContext(playerContext)
   return (
     <div className='Player'>
       <h4>Player's name is&nbsp;
