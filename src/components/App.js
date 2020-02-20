@@ -30,6 +30,7 @@ export default function App({ name }) {
 
   return (
     <div className='App'>
+      <playerContext.Provider>
       {/* instead of rendering Player
       renders a component
       which renders another component
@@ -38,7 +39,6 @@ export default function App({ name }) {
 
       {/* if player is getting its props magically
       we don't need to have its parent feed it the props */}
-      <playerContext.Provider>
         <Player />
       </playerContext.Provider>
     </div>
