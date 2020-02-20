@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Player from './Player'
 import playerContext from '../contexts/player'
+import { themeContext } from '../contexts/theme'
 
 export default function App({ name }) {
   const [health, setHealth] = useState(100)
@@ -25,25 +26,21 @@ export default function App({ name }) {
   const playerData = {
     name,
     actions,
-    scores: { health, morale }
+    scores: { health, morale },
   }
 
   const themeData = {
     backgroundColor: 'pink',
   }
 
-  // create a separate theme.js inside contexts folder (identical to player.js)
-  // pull it here into App
-  // wrap the thing with a themeContext.Provider
-  // feeding in the themeData to the value prop
-  // consume the theme from inside Display
-
   return (
-    <div className='App'>
-      <playerContext.Provider value={playerData}>
-        {/* Player could be nested way down */}
-        <Player />
-      </playerContext.Provider>
-    </div>
+    <themeContext.Provider value={themeData}>
+      <div className='App'>
+        <playerContext.Provider value={playerData}>
+          {/* Player could be nested way down */}
+          <Player />
+        </playerContext.Provider>
+      </div>
+    </themeContext.Provider>
   )
 }
