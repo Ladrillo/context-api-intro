@@ -23,7 +23,7 @@ export default function Player() {
         data={scores.morale}
       />
 
-      <Controls actions={actions} />
+      <Controls />
     </div>
   )
 }
