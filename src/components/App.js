@@ -21,6 +21,12 @@ export default function App({ name }) {
     },
   }
 
+  const context = {
+    name,
+    actions,
+    score: { health, morale }
+  }
+
   return (
     <div className='App'>
       {/* instead of rendering Player
