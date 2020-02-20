@@ -22,7 +22,7 @@ export default function App({ name }) {
     },
   }
 
-  const context = {
+  const playerData = {
     name,
     actions,
     score: { health, morale }
@@ -30,7 +30,7 @@ export default function App({ name }) {
 
   return (
     <div className='App'>
-      <playerContext.Provider>
+      <playerContext.Provider value={playerData}>
       {/* instead of rendering Player
       renders a component
       which renders another component
