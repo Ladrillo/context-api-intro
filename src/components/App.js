@@ -23,11 +23,16 @@ export default function App({ name }) {
 
   return (
     <div className='App'>
-      <Player
-        name={name}
-        scores={{ health, morale }}
-        actions={actions}
-      />
+      {/* instead of rendering Player
+      renders a component
+      which renders another component
+      ...
+      is actually using <Player /> */}
+      
+      {/* if player is getting its props magically
+      we don't need to have its parent feed it the props */}
+
+      <Player />
     </div>
   )
 }
