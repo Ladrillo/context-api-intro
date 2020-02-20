@@ -28,6 +28,16 @@ export default function App({ name }) {
     scores: { health, morale }
   }
 
+  const themeData = {
+    backgroundColor: 'pink',
+  }
+
+  // create a separate theme.js inside contexts folder (identical to player.js)
+  // pull it here into App
+  // wrapp the thing with a themeContext.Provider
+  // feeding in the themeData to the value prop
+  // consume the theme from inside Display
+
   return (
     <div className='App'>
       <playerContext.Provider value={playerData}>
