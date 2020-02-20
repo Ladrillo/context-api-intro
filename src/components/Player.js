@@ -4,8 +4,7 @@ import Controls from './Controls'
 import playerContext from '../contexts/player'
 
 export default function Player() {
-  const stuff = useContext(playerContext)
-  debugger
+  const { scores, actions, name } = useContext(playerContext)
   return (
     <div className='Player'>
       <h4>Player's name is&nbsp;

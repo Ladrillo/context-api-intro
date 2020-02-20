@@ -25,7 +25,7 @@ export default function App({ name }) {
   const playerData = {
     name,
     actions,
-    score: { health, morale }
+    scores: { health, morale }
   }
 
   return (
