@@ -5,6 +5,7 @@ import playerContext from '../contexts/player'
 
 export default function Player() {
   const stuff = useContext(playerContext)
+  debugger
   return (
     <div className='Player'>
       <h4>Player's name is&nbsp;
