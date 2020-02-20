@@ -31,14 +31,7 @@ export default function App({ name }) {
   return (
     <div className='App'>
       <playerContext.Provider value={playerData}>
-      {/* instead of rendering Player
-      renders a component
-      which renders another component
-      ...
-      is actually using <Player /> */}
-
-      {/* if player is getting its props magically
-      we don't need to have its parent feed it the props */}
+        {/* Player could be nested way down */}
         <Player />
       </playerContext.Provider>
     </div>
