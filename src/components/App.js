@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Player from './Player'
+import playerContext from '../contexts/player'
 
 export default function App({ name }) {
   const [health, setHealth] = useState(100)
