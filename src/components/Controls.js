@@ -1,13 +1,19 @@
 import React, { useContext } from 'react'
 import playerContext from "../contexts/player"
-import { themeContext } from '../contexts/theme'
 
+// hoc
+function withActions(Component)  {
+  return function Wrapper(props) {
+    const { actions } = useContext(playerContext)
+    return <Component {...props} actions={actions}/>
+  }
+}
 
-export default function Controls() {
-  const { actions } = useContext(playerContext)
-  const stuff = useContext(themeContext)
+export default withActions(Controls)
+
+export function Controls({ actions }) {
   return (
-    <div className='Controls' style={{ ...stuff }}>
+    <div className='Controls'>
       {
         Object.keys(actions).map(actionName => {
           return (
