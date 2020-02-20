@@ -1,8 +1,9 @@
 import React from 'react'
 import Display from './Display'
 import Controls from './Controls'
+import playerContext from '../contexts/player'
 
-export default function Player({ name, actions, scores }) {
+export default function Player() {
   return (
     <div className='Player'>
       <h4>Player's name is&nbsp;
