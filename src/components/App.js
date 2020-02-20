@@ -28,6 +28,6 @@ export default function App({ name }) {
         scores={{ health, morale }}
         actions={actions}
       />
-    </div >
+    </div>
   )
 }
